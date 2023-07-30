@@ -7,8 +7,15 @@ h1 {
     margin: 0;
 }
 
-p, h2 {
+p, h2, ul li {
   font-family: 'Roboto', sans-serif;
+}
+
+ul li {
+  width: 80%;
+  text-align: justify;
+  margin-top: 6px;
+  line-height: 1.2;
 }
 
 .topo-container {
@@ -20,7 +27,6 @@ p, h2 {
     transition: .5s;
     border-top: 2px solid #1087ff;
     padding-bottom: 2px;
-    border-bottom: 1px solid #000000;
   }
   .topo-header {
     width: 100%;
@@ -77,9 +83,12 @@ p, h2 {
     display: none;
   }
   .perfil-head {
+    margin-top: 4px;
     width: 100%;
     min-height: 300px;
     background-image: url(perfil-bg.jpg);
+    border-bottom: #222222;
+    border-top: #222222;
   }
   .perfil-describe {
     width: 300px;
@@ -87,8 +96,32 @@ p, h2 {
     position: absolute;
     margin: 40px 156px;
     background-color: rgba(249, 249, 249, 0.5);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.4);
     padding: 10px;
     border-radius: 20px;
+  }
+  .perfil-text-head {    
+    width: 100%;
+  }
+  .section-title {
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    letter-spacing: 4px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    color: #ffffff;
+    background-color: #1087ff;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.4);
+  }
+  .perfil-text-content{
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-align: justify;
+    width: 60%;
+    position: flex;
+    margin:auto;
   }
   @media only screen and (max-width: 1035px) {
     .topo-nav-wraper p.navContent {
@@ -100,7 +133,15 @@ p, h2 {
     .tap-menu-icon {
       display: block;
     }
+    .perfil-head {
+      background-size: 960px 540px;
+      background-repeat: no-repeat;
+      background-position: -350px 0 ;
+    }
     .perfil-describe {
       margin: 20px 20px;
+    }
+    .perfil-text-content {
+      width: 90%;
     }
   }
