@@ -4,6 +4,7 @@ h1 {
     font-weight: normal;
     font-size: 28px;
     padding-top: 46px;
+    padding-left: 19px;
     margin: 0;
 }
 p, ul li {
@@ -38,6 +39,14 @@ a, a:visited {
     height: 100%;
     margin: 0 auto;
     margin-top: 2px;
+  }
+  .social-media {
+    display: flex;
+    gap: 20px;
+  }
+  .media-ico {
+    width: 36px;
+    height: 36px;
   }
   .topo-nav-wraper {
     margin-left: 45%;
@@ -96,7 +105,7 @@ a, a:visited {
   }
   .perfil-describe {
     width: 300px;
-    height: 200px;
+    height: auto;
     position: absolute;
     margin: 40px 156px;
     background-color: rgba(249, 249, 249, 0.5);
@@ -137,6 +146,19 @@ a, a:visited {
     width: 60%;
     margin: auto;
   }
+  .contato-text-content {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;    
+  }
+  .contato-text-content img {
+    margin-top: 5px;
+  }
   .school-name, .brief-desc {
     flex: 1;
     height: auto;
@@ -154,6 +176,7 @@ a, a:visited {
     display: flex;
     align-items: center;
   }
+
   @media only screen and (max-width: 1035px) {
     .topo-nav-wraper p.navContent {
       display: none;
@@ -173,7 +196,20 @@ a, a:visited {
     .perfil-describe {
       margin: 20px 20px;
     }
-    .perfil-text-content {
+    .arr-r {
+      opacity: 0;
+    }
+    .perfil-text-content, .formacao-text-content, .cursos-text-content, .projetos-text-content, .habilidades-text-content, .contato-text-content {
       width: 90%;
+      flex-direction: column;
+    }
+    .school-name, .brief-desc {
+      flex: 1;
+      width: 100%;
+      height: auto;
+      display: auto;
+    }
+    .relational-school-brief {
+      flex-direction: column;
     }
   }
