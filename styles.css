@@ -2,16 +2,21 @@
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
+    font-variant: small-caps;
     font-size: 28px;
-    padding-top: 46px;
+    padding-top: 24px;
     padding-left: 19px;
-    margin: 0;
+    margin: auto;
 }
 p, ul li {
   padding-bottom: 16px;
 }
 p, h2, ul li {
   font-family: 'Roboto', sans-serif;
+}
+h2 {
+  font-size: 23px;
+  font-variant: small-caps;
 }
 ul li {
   width: 80%;
@@ -25,13 +30,14 @@ a, a:visited {
 }
 .topo-container {
     width: 100%;
-    height:auto;
-    display:table;
+    height: auto;
+    display: table;
     position: inherit;
     background-color: #F9F9F9;
     transition: .5s;
     border-top: 2px solid #1087ff;
-    padding-bottom: 2px;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 8px;
   }
   .topo-header {
     width: 100%;
@@ -96,13 +102,15 @@ a, a:visited {
     display: none;
   }
   .perfil-head {
-    margin-top: 4px;
     width: 100%;
     min-height: 600px;
     background-image: url(perfil-bg.jpg);
     border-bottom: #222222;
     border-top: #222222;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;  
   }
+
   .perfil-describe {
     width: 300px;
     height: auto;
@@ -112,6 +120,11 @@ a, a:visited {
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.4);
     padding: 10px;
     border-radius: 20px;
+  }
+  .perfil-describe p {
+    font-variant: small-caps;
+    font-style: italic;
+    
   }
   .perfil-text-head{    
     width: 100%;
@@ -176,7 +189,24 @@ a, a:visited {
     display: flex;
     align-items: center;
   }
-
+  .content {
+    height: 2000px; /* Altura suficiente para simular o scroll da página */
+  }
+  
+  .scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
   @media only screen and (max-width: 1035px) {
     .topo-nav-wraper p.navContent {
       display: none;
@@ -211,5 +241,14 @@ a, a:visited {
     }
     .relational-school-brief {
       flex-direction: column;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
