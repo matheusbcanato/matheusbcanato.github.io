@@ -8,10 +8,10 @@ h1 {
     padding-left: 19px;
     margin: auto;
 }
-p, ul li {
+p, ul li, a {
   padding-bottom: 16px;
 }
-p, h2, ul li {
+p, h2, ul li, a {
   font-family: 'Roboto', sans-serif;
 }
 h2 {
@@ -24,10 +24,6 @@ ul li {
   margin-top: 6px;
   line-height: 1.2;
 }
-a, a:visited {
-  color: blue;
-  text-decoration: none;
-}
 .topo-container {
     width: 100%;
     height: auto;
@@ -35,7 +31,7 @@ a, a:visited {
     position: inherit;
     background-color: #F9F9F9;
     transition: .5s;
-    border-top: 2px solid #1087ff;
+    border-top: 2px solid #007bff;
     border-bottom: 1px solid #222222;
     padding-bottom: 8px;
   }
@@ -46,6 +42,12 @@ a, a:visited {
     margin: 0 auto;
     margin-top: 2px;
   }
+  .topo-header p {
+    font-size: 15px;
+    color: #000000;
+    margin-left: 20px;
+    margin-top: auto;
+  }
   .social-media {
     display: flex;
     gap: 20px;
@@ -55,12 +57,15 @@ a, a:visited {
     height: 36px;
   }
   .topo-nav-wraper {
-    margin-left: 45%;
+    margin-left: 60%;
+    margin-bottom:10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
   }
   .topo-nav {
     float: left;
     width: 100%;
-    max-width: 1280px;
     height: 30px;
     margin: 0 auto;
     background-color: #F9F9F9;
@@ -87,7 +92,7 @@ a, a:visited {
     transform: translateX(-50%);
     width: 0;
     height: 1px;
-    background-color: #1087ff;
+    background-color: #007bff;
     opacity: 0;
     transition: opacity 1s ease;
   }
@@ -126,19 +131,21 @@ a, a:visited {
     font-style: italic;
     
   }
-  .perfil-text-head{    
-    width: 100%;
+  .perfil-text-head{
+    position: relative;
+    margin: auto;
   }
   .section-title {
+    width: 75%;
     display: flex;
     justify-content: center;
     font-size: 26px;
     letter-spacing: 4px;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
     position: relative;
     color: #ffffff;
-    background-color: #1087ff;
+    background-color: #007bff;
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.4);
   }
   .perfil-text-content{
@@ -149,7 +156,7 @@ a, a:visited {
     position: flex;
     margin: auto;
   }
-  .formacao-text-content, .cursos-text-content {
+  .formacao-text-content, .cursos-text-content, .projetos-text-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,12 +179,12 @@ a, a:visited {
   .contato-text-content img {
     margin-top: 5px;
   }
-  .school-name, .brief-desc {
+  .school-name, .brief-desc, .project-name {
     flex: 1;
     height: auto;
     position: flex;
   }
-  .school-name p, .brief-desc p {
+  .school-name p, .brief-desc p, .project-name p {
     margin-left: 20px;
     margin-right: 20px;
     padding: 0;    
